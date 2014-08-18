@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.*?>
+<?import java.net.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="librarysystem.presenter.main.MainPresenter">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarysystem.presenter.main.MainPresenter">
+    <stylesheets>
+        <URL value="@main.css" />
+    </stylesheets>
    <children>
-      <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+      <MenuBar layoutY="2.0" prefHeight="22.0" prefWidth="600.0">
         <menus>
-          <Menu mnemonicParsing="false" text="Manage Books">
+          <Menu mnemonicParsing="false" text="Manage Borrower">
             <items>
-              <MenuItem fx:id="addBook" mnemonicParsing="false" text="Add Book" />
-                  <MenuItem mnemonicParsing="false" text="Search Book" />
+              <MenuItem fx:id="addStudent" mnemonicParsing="false" onAction="#AddStudent"  text="Student" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Borrower">
+          <Menu mnemonicParsing="false" text="Manage Books">
             <items>
-              <MenuItem mnemonicParsing="false" text="Student" />
-                  <MenuItem mnemonicParsing="false" text="Teacher" />
+              <MenuItem fx:id="addBook" mnemonicParsing="false" text="Book" />
             </items>
           </Menu>
           <Menu mnemonicParsing="false" text="Help">

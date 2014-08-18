@@ -7,10 +7,9 @@
 package librarysystem;
 
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import librarysystem.presenter.main.MainView;
 
 /**
  *
@@ -20,9 +19,8 @@ public class App extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        Scene scene = new Scene(root);
-        
+        MainView mainView = new MainView();
+        Scene scene = new Scene(mainView.getView());
         stage.setScene(scene);
         stage.show();
     }

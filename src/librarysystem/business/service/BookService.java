@@ -18,12 +18,15 @@ public class BookService {
     @Inject
     EntityService es;
     
+    
      public void save(Book book){
          es.getEntityTransaction().begin();
          Book merged = es.getEntityManager().merge(book);
          es.getEntityTransaction().commit();
     }
      public void remove(Book book){
-         
+         es.getEntityTransaction().begin();
+         es.getEntityManager().remove(book);
+         es.getEntityTransaction().commit();
      }
 }

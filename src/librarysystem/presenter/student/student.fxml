@@ -6,11 +6,15 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="librarysystem.presenter.student.StudentPresenter">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="librarysystem.presenter.student.StudentPresenter">
    <children>
       <Button fx:id="addButton" layoutX="43.0" layoutY="124.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="ADD" />
       <Button fx:id="deleteButton" layoutX="112.0" layoutY="124.0" mnemonicParsing="false" text="DELETE" />
-      <StackPane layoutX="14.0" layoutY="163.0" prefHeight="211.0" prefWidth="572.0" />
+      <TableView layoutX="40.0" layoutY="176.0" prefHeight="200.0" prefWidth="287.0">
+        <columns>
+          <TableColumn prefWidth="144.0" text="first name" />
+          <TableColumn prefWidth="143.0" text="last name" />
+        </columns>
+      </TableView>
    </children>
 </AnchorPane>
